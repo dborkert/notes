@@ -21,16 +21,69 @@
  
  ## *05/08/2023*
  ### Tasks
- - [ ] Create Task List
- - [ ] check emails
- - [ ] Open teams
- - [ ] Solder LED for /SWRFAULT2 on CL0056
+ - [X] Create Task List
+ - [X] check emails
+ - [X] Open teams
+ - [X] Test USB print speed
+ - [X] Fix Update issue over USB
+ - [X] Solder LED for /SWRFAULT2 on CL0056
  - [ ] Regression test the center-center for helix
  - [ ] Final code cleanup and notes for helix
  ### Notes
  Arrival time: 9:20AM
+ Leave Time: 5:45PM
  
+ Today, I spent the day working on the helix. I fixed an issue where the machine wouldn't update over USB. Turns out the first buffer fill was
+ getting immediately cleared in the USBJobServer. I then fixed an issue where the jobRunner thread was hanging because of a mutex that was never
+ getting released when the machine was recovering commands (via a big job). My limit logic to prevent the carriage from slamming into the right
+ side of the machine is faulty in center-center mode. the Carriage then gets a left offset and engraves in the completly the wrong spot. I would
+ like to have a right side limit, but the old board doesn't so don't I need to determine whether it is necessary.
+
+ I soldered and LED to the /SWRFault2 pin on the CL0056 R05 board that was in a 100W laser when a RF MOSFET blew up.
+
+ These are the settings of the different machines as of 05082023.
+ Mini 18 Settings:
+- X Home: -265
+- y Home: -20
+- X R Home : -2400
+- Y R Home : +650
+ - Focus Adj: -20
+- Laser Match: -01
+- Stamp Match: 00
+- Bed Size: 18 x 12
+- AirA Raster: Yes
+- AirA Vector: Yes
+- Autodelete: No
+- Sys Unit: Inch
+- Laser TM: 03
+- Laser TI: 03
+- M. Control X: No
+- M. Control Y: No
+- Load FL Job: Yes
+- Europe: No
  
+  Helix Settings:
+- X Home: -155
+- y Home: -10
+- X R Home : -2400
+- Y R Home : +650
+ - Focus Adj: -03
+- Laser Match: -01
+- Stamp Match: 00
+- Bed Size: 24 x 18
+- AirA Raster: Yes
+- AirA Vector: Yes
+- Autodelete: No
+- Sys Unit: Inch
+- Laser TM: 03
+- Laser TI: 03
+- M. Control X: No
+- M. Control Y: No
+- Load FL Job: Yes
+- Europe: No
+
+
+Today I fixed the pro
   ## *05/09/2023*
  ### Tasks
  - [ ] Create Task List
