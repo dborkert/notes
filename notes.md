@@ -42,6 +42,7 @@
  I soldered and LED to the /SWRFault2 pin on the CL0056 R05 board that was in a 100W laser when a RF MOSFET blew up.
 
  These are the settings of the different machines as of 05082023.
+
  Mini 18 Settings:
 - X Home: -265
 - y Home: -20
@@ -61,7 +62,8 @@
 - M. Control Y: No
 - Load FL Job: Yes
 - Europe: No
- 
+<br>
+
   Helix Settings:
 - X Home: -155
 - y Home: -10
@@ -82,16 +84,21 @@
 - Load FL Job: Yes
 - Europe: No
 
-
-Today I fixed the pro
   ## *05/09/2023*
  ### Tasks
- - [ ] Create Task List
- - [ ] check emails
- - [ ] Open teams
+ - [X] Create Task List
+ - [X] Check emails
+ - [X] Open teams
+ - [X] Figure Out Center-Center Limits
+ - [ ] Remove option to revert firmware if no previous firmware exists
+ - [ ] Code Cleanup
+ - [ ] Run Final tests on Helix
+ - [ ] Get started on fixing raster drift due to vector match
  ### Notes
- Arrival time:
- 
+ Arrival time: 8:30PM
+ Departure time: 6:00PM
+
+ I spent all day trying to figure out how to prevent the carriage from crashing into the side in center-center mode. However, it is very difficult because the axis gets reset every time the "home position" changes. I gave up for now and just removed all logic that prevents the carriage from running into the side. This is the same behaviour that the old board shows. The motor drives have protection and the position controller quickly faults, so it's not dangerous to the electronics, but not great. That is literally all I worked on today and got nowhere UGH.
   ## *05/10/2023*
  ### Tasks
  - [ ] Create Task List
