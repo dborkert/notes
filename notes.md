@@ -7,18 +7,18 @@
  - [ ] Solder LED for /SWRFAULT2 on CL0056
  ### Notes
  Arrival time: 9:15
- 
- The problem with the helix was a stack overflow. The arrays for the flash job server were going way out of bounds. 
+
+ The problem with the helix was a stack overflow. The arrays for the flash job server were going way out of bounds.
  This was causing configuration data and other important things to be overwritten. The Machine() instantiation was being
  called from an interrupt context. This causes the RTOS to trigger a hardfault.
- 
+
  A second bug found on the helix was the firmware would allow a user to save while the USB job was being transfered to the printer.
- This would cause the job to never find the end and then trigger a hardfault. I fixed this by both canceling the job load when there is 
+ This would cause the job to never find the end and then trigger a hardfault. I fixed this by both canceling the job load when there is
  an error, and not allowing saving during a USB job.
- 
+
  Talked with allen about the rotary for the galvo machine and how the microstepping algorithm in the stepper controller seems to be struggling
- around the zero current crossing. Potiential fixes are a larger inducance motor or a higher frequency. 
- 
+ around the zero current crossing. Potiential fixes are a larger inducance motor or a higher frequency.
+
  ## *05/08/2023*
  ### Tasks
  - [X] Create Task List
@@ -32,7 +32,7 @@
  ### Notes
  Arrival time: 9:20AM
  Leave Time: 5:45PM
- 
+
  Today, I spent the day working on the helix. I fixed an issue where the machine wouldn't update over USB. Turns out the first buffer fill was
  getting immediately cleared in the USBJobServer. I then fixed an issue where the jobRunner thread was hanging because of a mutex that was never
  getting released when the machine was recovering commands (via a big job). My limit logic to prevent the carriage from slamming into the right
@@ -101,12 +101,19 @@
  I spent all day trying to figure out how to prevent the carriage from crashing into the side in center-center mode. However, it is very difficult because the axis gets reset every time the "home position" changes. I gave up for now and just removed all logic that prevents the carriage from running into the side. This is the same behaviour that the old board shows. The motor drives have protection and the position controller quickly faults, so it's not dangerous to the electronics, but not great. That is literally all I worked on today and got nowhere UGH.
   ## *05/10/2023*
  ### Tasks
- - [ ] Create Task List
- - [ ] check emails
- - [ ] Open teams
+ - [X] Create Task List
+ - [X] check emails
+ - [X] Open teams
+ - [X] Figure Out Center-Center Limits
+ - [X] Code Cleanup
+ - [ ] Run Final tests on Helix
+ - [X] Get started on fixing raster drift due to vector match
  ### Notes
- Arrival time:
- 
+ Arrival time: 9:20
+ Departure Time: 5:30
+
+ I spent more of the day fixing the problems with the carriage hitting the edge of the machine for the mini helix. In the end, I removed all of my new logic and just stuck with what was there previously. I also cleaned up some of the fpga logic. I felt quite awful all day, brain fog and just felt almost like I had a slight hangover. I think it was due to the intense exercise I did on tuesday.
+
   ## *05/11/2023*
  ### Tasks
  - [ ] Create Task List
@@ -114,7 +121,7 @@
  - [ ] Open teams
  ### Notes
  Arrival time:
- 
+
   ## *05/12/2023*
  ### Tasks
  - [ ] Create Task List
@@ -122,7 +129,7 @@
  - [ ] Open teams
  ### Notes
  Arrival time:
- 
+
   ## *05/15/2023*
  ### Tasks
  - [ ] Create Task List
@@ -130,7 +137,7 @@
  - [ ] Open teams
  ### Notes
  Arrival time:
- 
+
   ## *05/16/2023*
  ### Tasks
  - [ ] Create Task List
@@ -138,7 +145,7 @@
  - [ ] Open teams
  ### Notes
  Arrival time:
- 
+
   ## *05/17/2023*
  ### Tasks
  - [ ] Create Task List
@@ -146,7 +153,7 @@
  - [ ] Open teams
  ### Notes
  Arrival time:
- 
+
   ## *05/18/2023*
  ### Tasks
  - [ ] Create Task List
@@ -154,7 +161,7 @@
  - [ ] Open teams
  ### Notes
  Arrival time:
- 
+
   ## *05/19/2023*
  ### Tasks
  - [ ] Create Task List
