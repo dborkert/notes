@@ -132,17 +132,25 @@ When the vector match is enabled for raster, it doesn't seem to affect laser mat
 - [X] Create Task List
 - [X] check emails
 - [X] Open teams
-- [ ] Merge in Vector Match Fix ESD-1701 (not yet wait for 1082)
-- [ ] Start on no engrave power with unidirectional on ESD-1650
+- [X] Merge in Vector Match Fix ESD-1701 (not yet wait for 1082)
+- [X] Start on no engrave power with unidirectional on ESD-1650
 - [ ] Test Mini 24 in Technical Support
 - [ ] Begin Specification document Library
 ### Notes
 Arrival time: 9:25
-Departure Time:
+Departure Time:5:35
 
 - merge in ESD-1701
     - this is postponed due to use being too close to the release of 1.0.8.1 to get added into that release
     therefore Allen requested changes so it'll be added in 1.0.8.2.
+- ESD-1650
+    - skip_raster_lines=1 in debug.ini (located in build/install dir)
+    - Fixed makeUnidirectionalRasterLine in Parser_Machine_state.cpp.
+    state->maxMotionParams().rasterSpeed[speedindex] needed to be just "speed"
+
+finished off the day y printing a soap holder. Overall, a good day. I used the focus feature the microsoft clock and it really seemed to help me today. Have a good weekend.
+
+
 
 ## *05/15/2023*
 ### Tasks
