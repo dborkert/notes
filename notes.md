@@ -155,10 +155,41 @@ finished off the day y printing a soap holder. Overall, a good day. I used the f
 ## *05/15/2023*
 ### Tasks
 - [ ] Create Task List
-- [ ] check emails
-- [ ] Open teams
+- [X] check emails
+- [X] Open teams
+- [ ] Update FPGA addr decoder Helix
+- [ ] Begin Specification document Library
+= [ ] Test Mini 24 (24x12) in Tech support
 ### Notes
-Arrival time:
+Arrival time: 9:30
+
+Mini 24 Settings:
+- X Home: -320
+- y Home: +90
+- X R Home : -2400
+- Y R Home : +600
+- Focus Adj: -21
+- Laser Match: -01
+- Stamp Match: 00
+- Bed Size: 24 x 12
+- AirA Raster: Yes
+- AirA Vector: Yes
+- Autodelete: No
+- Sys Unit: Inch
+- Laser TM: 00
+- Laser TI: 00
+- M. Control X: No
+- M. Control Y: No
+- Load FL Job: Yes
+- Europe: No 
+
+orig network settings
+- IP address: 010.010.009.065
+- subnet mask: 255.255.255.0
+- Gateway: 192.168.0.254
+
+I spent the morning cleaning up the motordrive controller in the fpga. I then started working on the memory bus manager. I also started doing extensive testing down in sales on their mini 24. It was a good day, I am tired because I only got 5 hours of sleep. Alek is in town.
+
 
 ## *05/16/2023*
 ### Tasks
