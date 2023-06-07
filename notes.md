@@ -159,9 +159,10 @@ finished off the day y printing a soap holder. Overall, a good day. I used the f
 - [X] Open teams
 - [ ] Update FPGA addr decoder Helix
 - [ ] Begin Specification document Library
-= [ ] Test Mini 24 (24x12) in Tech support
+- [ ] Test Mini 24 (24x12) in Tech support
 ### Notes
 Arrival time: 9:30
+Departure time: 5:50
 
 Mini 24 Settings:
 - X Home: -320
@@ -193,29 +194,66 @@ I spent the morning cleaning up the motordrive controller in the fpga. I then st
 
 ## *05/16/2023*
 ### Tasks
-- [ ] Create Task List
-- [ ] check emails
+- [X] Create Task List
+- [X] check emails
 - [ ] Open teams
-### Notes
-Arrival time:
+- [ ] Finish working on the memory manager
+- [X] Finish testing on the Mini 24
 
+### Notes
+Arrival time: 9:40
+Departure time: 4:50
+
+I finished testing on the mini 24. I now have an issue where the jobs don't seem to consistently get sent when the machine is printing.
+I had to leave early for a pychiatry appointment. I also decided that the fpga stuff is good enough, and I should get this code out the door.
 ## *05/17/2023*
 ### Tasks
-- [ ] Create Task List
-- [ ] check emails
-- [ ] Open teams
+- [X] Create Task List
+- [X] check emails
+- [X] Open teams
+- [X] Fix network bug
+- [ ] Update Code Revision
+- [ ] Do one final cleanup
+
 ### Notes
-Arrival time:
+Arrival time: 9:15
+Departure time: 5:10
+
+I fixed the network bug, turns out that I was allocating way too much memory to each of the job server threads. I went home a little early because I was brain dead.
 
 ## *05/18/2023*
 ### Tasks
 - [ ] Create Task List
 - [ ] check emails
 - [ ] Open teams
+- [ ] Make github job
+- [ ] Finish Helix code cleanup
+### Notes
+Arrival time: 8:50AM
+Didn't take notes on this day
+## *05/19/2023*
+### Tasks
+- [ ] Create Task List
+- [ ] check emails
+- [ ] Open teams
 ### Notes
 Arrival time:
 
-## *05/19/2023*
+Forgot to record on this day
+
+## *06/05/2023*
+### Tasks
+- [ ] Create Task List
+- [ ] check emails
+- [ ] Open teams
+helix release checklist
+- [ ] Update version number
+- [ ] Add more comments and fix headers
+- [ ] Release Helix Code
+### Notes
+Arrival time:
+
+## *06/06/2023*
 ### Tasks
 - [ ] Create Task List
 - [ ] check emails
